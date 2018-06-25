@@ -8,7 +8,7 @@
                             <img src="{{  url('/images/'.$item->image_url) }}" alt="" width=250px, height=200px>
                         </div>
                         <div class="panel-body">
-                            <p class="item-title"><a href="#">{{ $item->name }}</a></p>
+                            <p class="item-title">{!! link_to_route('detail.show', $item->name, ['id' => $item->id]) !!}</p>
                             <div class="buttons text-center">
                                 @include('items.like_button', ['item' => $item])
                             </div>

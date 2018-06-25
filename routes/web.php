@@ -29,3 +29,6 @@ Route::get('listing/like', 'ListingController@like')->name('listing.like');
 
 Route::post('like','ItemUserController@like')->name('item_user.like');
 
+Route::get('mypage','WelcomeController@index')->name('welcome.index');
+
+Route::get('detail/{id}', 'DetailController@show')->name('detail.show');
