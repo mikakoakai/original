@@ -1,12 +1,16 @@
+@extends('layouts.app')
 
+@section('content')
+    <h1>Detail Page</h1>
+    @include('items.items', ['items' => $items])
 @if ($items)
     <div class="row">
         @foreach ($items as $item)
             <div class="item">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="panel panel-default">
-                        <div class="scaling">
-                            <img src="{{  url('/images/'.$item->image_url) }}" alt="" width=270px, height=200px>
+                        <div class="panel-heading text-center">
+                            <img src="{{  url('/images/'.$item->image_url) }}" alt="" width=250px, height=200px>
                         </div>
                         <div class="panel-body">
                             <p class="item-title">{!! link_to_route('detail.show', $item->name, ['id' => $item->id]) !!}</p>
@@ -20,3 +24,9 @@
         @endforeach
     </div>
 @endif
+
+    
+    
+    
+@endsection
+

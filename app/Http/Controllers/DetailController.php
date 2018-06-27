@@ -12,11 +12,10 @@ class DetailController extends Controller
      public function show($id)
     { 
         
-         $items = Detail::find($id);
-         
+         $item = Detail::find($id);
         
         return view('detail.show', [
-            'items' => $items,
+            'item' => $item,
             ]);
 }
 

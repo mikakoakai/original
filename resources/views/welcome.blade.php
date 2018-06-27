@@ -4,7 +4,7 @@
     <div class="cover">
         <div class="cover-inner">
             <div class="cover-contents">
-                <h1>Which is your favorite?</h1>
+                <h1>Dogs.comでお気に入りを探そう!</h1>
                 @if (!Auth::check())
                     <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">Find my favorite</a>
                 @endif
